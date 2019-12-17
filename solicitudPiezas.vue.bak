@@ -1,0 +1,104 @@
+
+<template>
+  <div>
+    <h2 class="text-primary text-center">{{tituloPagina}}</h2>
+    <!--<altaVoluntariaCmp />-->
+    <!--      <canvas id="cnv" name="cnv" style="background-color:white;" width="300" height="300"></canvas>-->
+    <!--<div id="figuraHumana">
+      <img src="~/../msiformatos/figuraHumana.png" alt="FiguraHumana" width="300" />
+      <canvas id="cnv" name="cnv" width="300" height="300"></canvas>
+    </div>-->
+    <div>
+      <p>Image to use:</p>
+      <img id="scream" style="display: none;" src="~/../msiFormatos/FiguraHumana.png" alt="figuraHumana" height="200"></img>
+
+      <p>Canvas:</p>
+      <canvas id="myCanvas" width="300" height="300" style="border:1px solid #d3d3d3;">
+        Your browser does not support the HTML5 canvas tag.
+      </canvas>
+    </div>
+
+    
+    <button id="btnSobreponer" name="sobreponerBtn" v-on:click="sobreponer()">SOBREPONER</button>
+
+    <div>
+<!--      <canvas id="pizarra" style="width: 300px;height: 300px;background-color: #0D0909;"></canvas>-->
+      <canvas id="pizarra" style="width: 300px;height: 300px;background-color: black;"></canvas>
+    </div>
+    <button id="btnMostrar" name="mostrarBtn" v-on:click="getTrazosFiguraHumana()">MOSTRAR CAPTURA</button>
+    <div id="imagenCanvas">
+      <!--<img id="imagenCapturada" style="background-color: #0D0909;" src="" alt="figuraHumana" height="200">-->
+      <img id="imagenCapturada" style="background-color: black;" src="" alt="figuraHumana" height="200">
+      <!--<img id="imagenCapturada" style="background-color: #0D0909;" v-bind:src="~/../msiformatos/figuraHumana.png" width="200" height="200" />-->
+      <p>Imagen Base64->[{{imgBase64}}]</p>
+    </div>
+  </div>
+
+
+</template>
+<script>
+  //import altaVoluntariaCmp from '~/components/altaVoluntariaCmp';
+  export default {
+    name: 'solicitudPiezas',
+    components: {
+      //altaVoluntariaCmp
+    },
+    data() {
+      return {
+        tituloPagina: 'SOLICITUD PIEZAS ANATOMOPATOLÓGICAS',
+        imgBase64: '',
+      }
+    },
+    mounted() {
+
+      let script = document.createElement('script');
+      script.setAttribute('src', 'figuraHumana.js');
+      document.head.appendChild(script);
+
+    },
+
+    created() {
+
+
+      //this.sobreponer();
+      // No hay sesion abierta, redirige a login
+      if (this.$store.state.token === 'NONE') {
+        this.$router.push({ name: 'login' })
+      };
+    },
+    methods: {
+      sobreponer: function () {
+          var c = document.getElementById("myCanvas");
+          var ctx = c.getContext("2d");
+          var img = document.getElementById("scream");
+        ctx.drawImage(img, 0, 0, 300, 300);
+        this.sobreponerPizarra();
+      },
+      sobreponerPizarra: function () {
+        var c = document.getElementById("pizarra");
+        var ctx = c.getContext("2d");
+        var img = document.getElementById("scream");
+        ctx.drawImage(img, 0, 0, 300, 300);
+      },
+      captura: function () {
+        mostrarImagen(this.imgBase64);
+      },
+      getTrazosFiguraHumana() {
+        var canvas = document.getElementById("pizarra");
+        this.imgBase64 = canvas.toDataURL();
+        var imageElement = document.getElementById("imagenCapturada");
+        imageElement.src = this.imgBase64;
+        this.imgBase64 = this.imgBase64.slice(this.imgBase64.indexOf(',') + 1);
+      }
+    }
+  };
+
+</script>
+<style>
+
+  /*canvas {
+    width: 300px;
+    height: 300px;
+    background-color: #0D0909;
+  }*/
+</style>

@@ -1,0 +1,20 @@
+const cmds = [
+    ['git init', 'Inicializa git.'],
+    ['git status', 'Estado del git.'],
+    ['git add .', 'Agrega todo en este directorio para dar seguimiento.'],
+    ['git commit -m "Descripción del snap-shot"', 'Empaqueta el snapshot y etiquetalo'],
+    ['git remote add origin https://github.com/gaboxsoft/bases-node.git', 'agrega un origen remoto para subir el proyecto.'],
+    ['git push -u origin master', 'Sube el proyecto'],
+    ['git tag -a v1.0.0 -m "Primera versión"', 'Crear un tag para versión release'],
+    ['git push --tags', 'Sube los tags release creados'],
+    ['heroku create -h', 'Ayuda sobre heroku'],
+    ['heroku create "name-app"', 'Crear unaapp en heroku'],
+    ['git remote', 'Muestra los destinos remotos declarados a git'],
+    ['git remote -v', 'Muestra los estados de los destinos remotos declarados a git'],
+    ['heroku login', 'Identificarse y conectarse a lacuenta de heroku'],
+    ['git push heroku master', ''],
+    ['heroku open', 'Abre el navegador WEB y redirige a la url de la app '],
+    ['git commit -am "Etiqueta"', 'Equivale a "git add ." + "git commit -m etiqueta"'],
+    ['', ''],
+    ['', '']
+];

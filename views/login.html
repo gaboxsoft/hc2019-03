@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lista Usuarios</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
+
+<body>
+
+
+    <div id="login" class="container">
+        <h1>Usuario</h1>
+        <!-- <div class="bg-primary"> -->
+        <h1>Usuario conectado: {{userLogin.usuario.nombres}}</h1>
+        <h2>Rol: {{userLogin.usuario.rol}}</h2>
+        <h5>Rol: {{userLogin.token}}</h2>
+            <!-- </div> -->
+
+            <button v-on:click="clicky">Hello</button>
+
+            <!-- <div id="formLogin" class="container bg-info ">
+            <h3> R e g i s t r é s e :</h3>
+            <form action="getLogin" method="POST">
+                <label for="email">eMail:</label>
+                <input type="email" id="email" class="form-control"></input>
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" class="form-control"></input>
+                <input type="sub" class="btn col-12 btn-warning " value="Envía">
+                <br><br>
+            </form> -->
+    </div>
+
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+
+    <script type="text/javascript">
+        urlLogin = '/login';
+        userLogin = '';
+        new Vue({
+            el: "#login",
+            created: () => {
+                clicky()
+            },
+            data: {
+                list: [],
+                userLogin: '',
+            },
+            methods: {
+                clicky: () => {
+                    alert('hola.........');
+                },
+                getLogin: function() {
+                    axios.post(urlLogin, {
+                        email: this.email,
+                        password: this.password
+                    }).then((response) => {
+                        this.userLogin = response.data;
+                    }).catch(err => console.log(err));
+                },
+
+            }
+        });
+    </script>
+</body>
+
+</html>
+
+<!-- <div class="contanier fixed-top mb-3">
+         <h3 class="pt-5">MENU</h3> 
+        <div class="btn-group">
+            <button type="button" class="btn btn-success">Login</button>
+            <div class="btn-group">
+                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">Catálogos</button>
+                <div class="dropdown-menu">
+                    <button type="button" class="btn btn-success dropdown-item">Consumibles</button>
+                    <button type="button" class="btn btn-success dropdown-item">Servicios</button>
+                    <button type="button" class="btn btn-success dropdown-item">Clientes</button>
+                    <a href="#" class="dropdown-item">Pacientes</a>
+                    <a href="#" class="dropdown-item">IVA</a>
+                </div>
+            </div>
+            <button type="button" class="btn btn-success">Compras</button>
+            <button type="button" class="btn btn-success">Caja</button>
+            <button type="button" class="btn btn-success">Administración</button>
+        </div>
+        <hr>
+    </div>
+    <div class="col fixed-bottom borde">
+        <hr>
+        <p>Clínica Médica San Isidro 2019 -- Archivo Clínico -- versión 0.0.1</p>
+    </div> -->

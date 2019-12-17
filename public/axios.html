@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title></title>
+
+    <script type="text/javascript">
+
+    </script>
+</head>
+<body>
+
+    <button onclick="getUsers()">GET Pacientes</button>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script>
+        usuarios = {};
+        err = {};
+        function getUsers() {
+            
+            this.urlGetUsuarios = 'https://kloudbrokers.southcentralus.cloudapp.azure.com:3000';
+          axios.get(this.urlGetUsuarios+'/listaUsuarios', {
+                //token: this.$store.state.token
+            })
+                .then((response) => {
+                    console.log('5 get usuarios--> OK: ', response.data);
+                    usuarios = response.data.usuarios;
+                    console.log('get usuarios result=', usuarios);
+                },
+                (error) => {
+                        console.log('hubo error: en pacienteTag : ', error.Error, error.config);
+                    usuarios = { };
+                        err = error.response;
+                });
+        }
+
+        function performGetRequest1() {
+            var resultElement = document.getElementById('getResult1');
+            resultElement.innerHTML = '';
+
+            axios.get('http://jsonplaceholder.typicode.com/todos')
+                .then(function (response) {
+                    resultElement.innerHTML = generateSuccessHTMLOutput(response);
+                })
+                .catch(function (error) {
+                    resultElement.innerHTML = generateErrorHTMLOutput(error);
+                });
+        }
+
+        function generateSuccessHTMLOutput(response) {
+            return '<h4>Result:</h4>' +
+                '<h5>Status:</h5>' +
+                '<pre>' + response.status + ' ' + response.statusText + '</pre>' +
+                '<h5>Headers:</h5>' +
+                '<pre>' + JSON.stringify(response.headers, null, '\t') + '</pre>' +
+                '<h5>Data:</h5>' +
+                '<pre>' + JSON.stringify(response.data, null, '\t') + '</pre>';
+        }
+
+        function generateErrorHTMLOutput(error) {
+            return '<h4>Result:</h4>' +
+                '<h5>Message:</h5>' +
+                '<pre>' + error.message + '</pre>' +
+                '<h5>Status:</h5>' +
+                '<pre>' + error.response.status + ' ' + error.response.statusText + '</pre>' +
+                '<h5>Headers:</h5>' +
+                '<pre>' + JSON.stringify(error.response.headers, null, '\t') + '</pre>' +
+                '<h5>Data:</h5>' +
+                '<pre>' + JSON.stringify(error.response.data, null, '\t') + '</pre>';
+        }
+
+
+        function performGetRequest2() {
+            var resultElement = document.getElementById('getResult2');
+            var todoId = document.getElementById('todoId').value;
+            resultElement.innerHTML = '';
+
+            axios.get('http://jsonplaceholder.typicode.com/todos', {
+                params: {
+                    id: todoId
+                }
+            })
+                .then(function (response) {
+                    resultElement.innerHTML = generateSuccessHTMLOutput(response);
+                })
+                .catch(function (error) {
+                    resultElement.innerHTML = generateErrorHTMLOutput(error);
+                });
+        }
+
+        //document.getElementById('todoInputForm').addEventListener('submit', performPostRequest);
+
+        function performPostRequest(e) {
+            var resultElement = document.getElementById('postResult');
+            var todoTitle = document.getElementById('todoTitle').value;
+            resultElement.innerHTML = '';
+
+            axios.post('http://jsonplaceholder.typicode.com/todos', {
+                userId: '1',
+                title: todoTitle,
+                completed: false
+            })
+                .then(function (response) {
+                    resultElement.innerHTML = generateSuccessHTMLOutput(response);
+                })
+                .catch(function (error) {
+                    resultElement.innerHTML = generateErrorHTMLOutput(error);
+                })
+            e.preventDefault();
+        }
+
+        function clearOutput() {
+            var resultElement = document.getElementById('getResult1');
+            resultElement.innerHTML = '';
+            var resultElement = document.getElementById('getResult2');
+            resultElement.innerHTML = '';
+            var resultElement = document.getElementById('postResult');
+            resultElement.innerHTML = '';
+        }
+    </script>
+
+</body>
+</html>
+

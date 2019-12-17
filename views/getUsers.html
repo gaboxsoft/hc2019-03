@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lista Usuarios</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="main" class="container">
+
+        <div>
+            <h1>Usuario conectado: {{userLogin.usuario.nombres}}</h1>
+            <h2>Rol: {{userLogin.usuario.rol}}</h2>
+            <h5>Rol: {{userLogin.token}}</h5>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <h1>Lista Usuarios</h1>
+                <ul class="list-group">
+
+                    <li v-for="u in usersGet.usuarios" class="list-group-item">
+                        {{u.email}} {{u.nombres}} {{u.rol}}
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-8">
+                <h1>JSON</h1>
+                <pre>
+                    {{userLogin|json}}
+                    {{usersGet.usuarios|json}}
+                </pre>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+
+
+
+    <script type="text/javascript">
+        urlUsers = '/usuarios?limite=5&desde=0';
+        urlLogin = '/login';
+        userLogin = '';
+        //urlUsers = 'https://randomuser.me/api/?results=10';
+        new Vue({
+            el: "#main",
+            data: {
+                list: [],
+                userLogin: '',
+                usersGet: ''
+            },
+            created: function() {
+                this.getLogin(() => {
+                    this.getUsers();
+                });
+            },
+            methods: {
+
+                getLogin: function(next) {
+                    axios.post(urlLogin, {
+                        email: 'gabox@msn.com',
+                        password: '12345'
+
+                    }).then((response) => {
+                        this.userLogin = response.data;
+                        next();
+                    }).catch(err => console.log(err));
+                },
+
+                getUsers: function() {
+                    axios.get(urlUsers, {
+                        headers: {
+                            'token': this.userLogin.token
+                        }
+                    }).then((response) => {
+                        this.usersGet = response.data;
+                    }).catch(err => console.log('error en getUsuarios:' + err));
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

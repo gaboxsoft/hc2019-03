@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Medica</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="x-ua-compaible" content="ie-edge">	
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">	
+
+	<style type="text/css">
+    body {
+      padding: 10px,0px,0px,20px;
+      margin-top: 90px;
+      overflow: auto;
+      /*margin: 150px,0px,0px,0px;*/
+      /*align-items: center;*/
+    }
+	.borde {
+		background-color: blue;
+		
+	}
+	.borde1{
+		background-color: aquamarine;
+		text-align: center;
+		height: 50px;	
+	}
+	.borde2{
+		height: 50px;	
+		text-align: center;
+		background-color: olivedrab;
+	}
+	.borde3{
+		background-color: orangered;
+		text-align: center;
+		height: 50px;	
+	}
+</style>
+</head>
+<body>
+    <h3 class="borde3">Bienvenidos a Bootstrap</h3>
+
+
+    <div class="container">
+        <div class="row">
+<!--            <div class="col fixed-top borde">-->
+            <div class="col borde">
+                <H3> DEBERÍA SER ENCABEZADO PERO COMPITE CON EL MENÚ</H3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+            </div>
+        </div>
+
+        <div class="row" >
+            <div class="col-1 d-none d-md-block borde1">HOLA1</div>
+            <div class="col-1 col-sm-4 col-md-8 col-lg-10 col-xl-12 borde2">HOLA2</div>
+            <div class="col-4 d-none d-lg-inline borde3">HOLA3</div>
+        </div>
+
+        <div class="row">
+            <div class="col fixed-bottom borde">
+                <h3>PIE DE PAGINA</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <h3 class="pt-5"> Alineaciones de texto en columnas</h3>
+        <div class="row">
+            <div class="col border">
+                <div class="clearfix">
+                    <span class="float-left">IZQUIERDA1</span>
+                    <span class="float-right">DERECHA1</span>
+                </div>
+            </div>
+            <div class="col border">
+                <div class="clearfix">
+                    <span class="float-left">IZQUIERDA2</span>
+                    <span class="float-right">DERECHA2</span>
+                </div>
+            </div>
+            <div class="col border">
+                <div class="clearfix">
+                    <span class="float-left">IZQUIERDA3</span>
+                    <span class="float-right">DERECHA3</span>
+                </div>
+            </div>
+            <div class="col border">
+                <div class="clearfix">
+                    <span class="float-left">lorem</span>
+                    <span class="float-right">DERECHA4</span>
+                    <span class="float-right">DERECHA4</span>
+                </div>
+            </div>
+            <div class="col border">
+                <div class="clearfix">
+                    <span class="float-left">IZQUIERDA5</span>
+                    <span class="float-right">DERECHA5</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h3 class="pt-5">Alineación de texto en columnas según tamaño de dispositivo</h3>
+        <div class="row d-block">
+            <div class="float-col-center">1</div> <br>
+            <div class="float-sm-right">2</div> <br>
+            <div class="float-md-right">3</div> <br>
+            <div class="float-lg-right">4</div> <br>
+            <div class="float-xl-right">5</div> <br>
+            <div class="float-none">6</div> <br>
+        </div>
+
+        <div class="mx-auto text-center border" style="width: 100px; background-color: grey;">CENTRADO</div>
+
+        <div class="container borde" style="height: 500px">
+            <div class="row justify-content-around" style="height: 300px; background-color: grey;">
+                <div class="col-3 align-self-center borde1 ">UNOsss</div>
+                <div class="col-3 borde2">DOSsss</div>
+                <div class="col-3 align-self-end borde3">TRESsss</div>
+            </div>
+        </div>
+
+        <div class="text-primary">
+            <span class="bg-warning">
+                PRIMARIO
+            </span>
+            <span class="text-warning bg-info">
+                SECUNDARIO
+            </span>
+            <span class="text-success bg-danger">
+                TERCIARIO
+            </span>
+            <span class="text-dark bg-warning">
+                CUATERNARIO
+            </span>
+        </div>
+    </div>
+
+    <div class="container">
+        <h3 class="pt-5">Tablasssssssssss</h3>
+        <div class="col-6">
+            <table class="table table-striped table-bordered table-hover table-info ">
+                <tr>
+                    <td>LUNES</td>
+                    <td>MARTES</td>
+                    <td>MIERCOLES</td>
+                    <td>JUEVES</td>
+                    <td>VIERNES</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>20</td>
+                    <td>30</td>
+                    <td>40</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>20</td>
+                    <td>30</td>
+                    <td>40</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>20</td>
+                    <td>30</td>
+                    <td>40</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>20</td>
+                    <td>30</td>
+                    <td>40</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>20</td>
+                    <td>30</td>
+                    <td>40</td>
+                    <td>50</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="container">
+        <h3 class="pt-5">IMAGENES</h3>
+        <div class="contanier">
+            <h3>Mi amigo "Chenteras"</h3>
+            <img src="img/dos.jpg" class="float-left img-thumbnail">
+        </div>
+
+        <h3 class="pt-5">VARIOS</h3>
+        <p>
+            Recuerda realizar tus declaraciones fiscales ante el
+            <abbr title="Sistema de Administración Tributaria">SAT</abbr>.
+        </p>
+        <blockquote>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.  laborum.
+        </blockquote>
+        <ol>
+            <li>comer</li>
+            <li>digerir</li>
+            <li>ir al baño</li>
+        </ol>
+        <code></code>
+        <kbd></kbd>
+        <pre></pre>
+        <pre class="container">
+        <code class="bg-warning bg-success">
+				public void AniosCumplidos(DateTime fechaNacimiento)
+				{
+					return DateTime.Now.Year-fechaNacimiento.Year;
+				}
+			</code>
+		</pre>
+    </div>
+
+    <div class="contanier">
+        <h3 class="pt-5">JUMBOTRON</h3>
+        <p class="text-justify text-danger">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est l
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <p class="jumbotron jumbotron-justify jumbotron-success">
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur.
+        </p>
+        <p class="alert alert-danger">
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur.
+            <a href="#" class="alert-link">esto es un link</a>
+        </p>
+        <p class="alert alert-success alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>El reporte lo puedes consultar <a href="#" class="alert-link">aquí</a>
+        </p>
+        <p>
+            Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+    </div>
+
+    <div class="container">
+        <h3 class="pt-5">BUTTONS</h3>
+
+        <button type="button" class="btn btn-success btn-lg">Facturar</button>
+        <button type="button" class="btn btn-outline-danger btn-sm">Imprimir</button>
+        <button type="button" class="btn col-5 btn-info btn-xs">e-mail</button>
+        <button type="button" class="btn btn-warning btn-xl">a Pantalla</button>
+        <button type="button" class="btn btn-info btn-link bn-sm btn-block">a FTP</button>
+        <button type="button" class="btn btn-info bn-sm btn-block disabled">a PDF</button>
+
+    </div>
+
+    <!--	<div class="contanier fixed-top">-->
+    <div class="contanier">        
+        <!-- <h3 class="pt-5">MENU</h3> -->
+        <div class="btn-group">
+            <div class="btn-group">
+                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">Catálogos</button>
+                <div class="dropdown-menu">
+                    <button type="button" class="btn btn-success dropdown-item">Consumibles</button>
+                    <button type="button" class="btn btn-success dropdown-item">Servicios</button>
+                    <button type="button" class="btn btn-success dropdown-item">Clientes</button>
+                    <a href="#" class="dropdown-item">Pacientes</a>
+                    <a href="#" class="dropdown-item">IVA</a>
+                </div>
+            </div>
+            <button type="button" class="btn btn-success">Compras</button>
+            <button type="button" class="btn btn-success">Caja</button>
+            <button type="button" class="btn btn-success">Administración</button>
+        </div>
+    </div>
+
+    <div class="contanier">
+        <h3 class="pt-5">BADGE & BADGE PILLS</h3>
+        <p class="text-warning">This is a <span class="badge badge-success">Badge</span> a this is a <span class="badge badge-success badge-pill">Bage Pill</span></p>
+        <button type="button" class="btn btn-warning btn-lg"> <span class="badge badge-success">4</span> mensajes sin leer!</button>
+    </div>
+    <div class="contanier">
+        <h3 class="pt-5">BARRA DE PROGRESO</h3>
+        <!-- <progress class="col-12 progres-success" value="7.5" max="75"> -->
+        <div class="progress" style="height: 50px">
+            <div class="progress-bar bg-success w-75 progress-bar-striped progress-bar-animated"><h3 style="color: aqua">75%</h3></div><br>
+            <div class="progress-bar bg-danger w-5 progress-bar-striped progress-bar-animated"><h3 style="color: aqua">5%</h3></div>
+            <div class="progress-bar bg-warning w-20 progress-bar-striped progress-bar-animated"><h3 style="color: aqua">20%</h3></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h3 class="pt-5">Navegación / Paginación</h3>
+        <ul class="pagination pagination-md">
+            <li class="page-item"><a class="page-link" href="#">-Primero</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item disabled"><a class="page-link" href="#">2</a></li>
+            <li class="page-item active"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">4</a></li>
+            <li class="page-item"><a class="page-link" href="#">5</a></li>
+            <li class="page-item"><a class="page-link" href="#">...</a></li>
+            <li class="page-item"><a class="page-link" href="#">Último-></a></li>
+        </ul>
+        <h3 class="pt-5">Breadcrum / Paginación</h3>
+        <ul class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Medica</a></li>
+            <li class="breadcrumb-item"><a href="#">Cuentas</a></li>
+            <li class="breadcrumb-item"><a href="#">Consumos</a></li>
+            <li class="breadcrumb-item"><a href="#">Edo.Cta</a></li>
+        </ul>
+
+        <h3 class="pt-5">List Group / Paginación</h3>
+        <ul class="list-group">
+            <li class="list-group-item bg-warning"><a href="#">Lunes</a></li>
+            <li class="list-group-item"><a href="#">Martes</a></li>
+            <li class="list-group-item disabled"><a href="#">Miercoles</a></li>
+            <li class="list-group-item"><a href="#">Jueves</a></li>
+            <li class="list-group-item active"><a href="#">Viernes<
+            <li class="list-group-item "><a href="#">Sabado</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h3 class="pt-5">Tarjetas</h3>
+        <table>
+            <tr>
+                <td class="col-6">
+                    <div class="card ">
+                        <div class="card-header">
+                            <p>ADMINISTRADOR</p>
+                        </div>
+                        <img src="img/dos.jpg" class="w-25 align-self-center">
+                        <div class="card-body">
+                            <h3 class="card-title">José González</h3>
+                            <p class="card-text">Administrador General de Almacénes Díaz</p>
+                        </div>
+                        <div class="card-footer">
+                            <p>Fuente: <span class="badge badge-success">Departamento de Recursos Humanos</span></p>
+                        </div>
+
+                    </div>
+                </td>
+                <td class="col-6">
+                    <div class="card ">
+                        <div class="card-header">
+                            <p>GERENTE</p>
+                        </div>
+                        <img src="img/uno.jpg" class="w-25 align-self-center">
+                        <div class="card-body">
+                            <h3 class="card-title">Guillermina Arambuzabala</h3>
+                            <p class="card-text">Gerente de almacén</p>
+                        </div>
+                        <div class="card-footer">
+                            <p>Fuente: <span class="badge badge-success">Departamento de Recursos Humanos</span></p>
+                        </div>
+
+                    </div>
+                </td>
+                <div class="card w-50">
+                    <div class="card-header">
+                        <p>G A T O</p>
+                    </div>
+                    <img src="img/tres.jpg" class="w-25 align-self-center">
+                    <div class="card-body">
+                        <h3 class="card-title">Albertano</h3>
+                        <p class="card-text">Secretario IBM</p>
+                    </div>
+                    <div class="card-footer">
+                        <p>Fuente: <span class="badge badge-success">Departamento de Recursos Humanos</span></p>
+                    </div>
+
+                </div>
+
+            </tr>
+        </table>
+    </div>
+
+
+    <div class="contanier">
+        <h3 class="pt-5">DROPDOWN</h3>
+        <div class="dropdown">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Opciones</button>
+            <div class="dropdown-menu">
+                <div class="dropdown-header dropdown-header-warning">--> Generales</div>
+                <a class="dropdown-item active" href="#">NOMBRE EMPRESA</a>
+                <a class="dropdown-item" href="#">RFC</a>
+                <a class="dropdown-item" href="#">DIRECCIÓN</a>
+                <div class="dropdown-header">--> Específicas</div>
+                <a class="dropdown-item" href="#">SUCURSAL</a>
+                <a class="dropdown-item disabled" href="#">CÓDIGO POSTAL</a>
+                <a class="dropdown-item" href="#">CSD</a>
+                <a class="dropdown-item" href="#">FIEL</a>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="contanier">
+        <h3 class="pt-5">COLLAPSE</h3>
+        <button class="btn btn-warning" data-toggle="collapse" data-target="#perfil-persona">Perfil</button>
+        <div id="perfil-persona" class="collapse bg-success">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,ariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+    </div>
+
+
+    <div class="container fixed-top">
+        <!--<h3>Menú de navegación clásico</h3>-->
+        <nav class="navbar navbar-expand-md bg-danger navbar-dark">
+            <a class="navbar-brand" href="#">
+                <img src="img/cuatro.jpg" style="width: 100px; ">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu-opciones">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu-opciones">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="#" class="nav-link ">Catálogos</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" id="submenu-cuentas">Cuentas</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item">Ingreso</a>
+                            <a class="dropdown-item">Salida</a>
+                            <a class="dropdown-item">Consumos</a>
+                            <a class="dropdown-item">Edo.Cta</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link">Caja</a></li>
+                    <form action="miFormulario.php" class="form-inline " method="post">
+                        <input type="text" placeholder="Buscar" class="form-control mr-sm-2"></input>
+                        <button class="btn btn-success" type="submit">Buscar</button>
+                    </form>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <br>
+
+    <div class="container bg-info">
+        <h3> Formulario de registro para el curso</h3>
+        <form action="registro.php" method="POST">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" class="form-control"></input>
+            <label for="email">eMail:</label>
+            <input type="email" id="email" class="form-control"></input>
+            <label for="fecha">Fecha:</label>
+            <input type="datetime" id="nombre" class="form-control"></input>
+            <label for="color">Color:</label>
+            <input type="color" id="color" class="form-control"></input>
+            <label for="contrasenia">Contraseña:</label>
+            <input type="password" id="contrasenia" class="form-control"></input>
+            <label for="recordar" class="form-check-label text-end col-6">
+                <input type="checkbox" class="form-check-input">
+                Recordarme
+            </label> <br>
+            <label for="descripcion">Descripción:</label>
+            <textarea name="descripcion" id="descripcion" class="form-control" cols="20" rows="5"></textarea>
+            <br>
+            <div class="container bg-warning">
+                <div class="form-check">
+                    <label for="chk1" class="form-check-label" s>
+                        <input type="checkbox" class="form-check-input" name=""> Hombre
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label for="chk2" class="form-check-label" s>
+                        <input type="checkbox" class="form-check-input" name=""> Mujer
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label for="chk3" class="form-check-label" s>
+                        <input type="checkbox" class="form-check-input" name=""> Dron
+                    </label>
+                </div>
+            </div>
+            <label for="Preferencia">Preferencia de lenguaje:</label>
+            <div id="preferencia" class="container bg-success">
+                <div class="radio"><label class="radio-inline"><input type="radio" name="">C#</label></div>
+                <div class="radio"><label class="radio-inline"><input type="radio" name="">Javascript</label></div>
+                <div class="radio"><label class="radio-inline"><input type="radio" name="">Java</label></div>
+            </div>
+            <label for="Disponibilidad">Disponibilidad:</label>
+            <select name="dia">
+                <option value="lunes">Lunes</option>
+                <option value="martes">Martes</option>
+                <option value="miercoles">Miércoles</option>
+                <option value="jueves">Jueves</option>
+                <option value="viernes">Viernes</option>
+            </select>
+            <br>
+            <input type="sub" class="btn col-12 btn-warning " ="" value="Envía">
+            <br><br>
+        </form>
+    </div>
+
+    <div class="container bg-success">
+        <h3 class="pt-5">CARRUSEL IMÁGENES</h3>
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <div id="carou" class="carousel slide" data-ride="carousel">
+                <div id="#demo" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                    </ol>
+                    <div class="carousel-inner ">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="img/uno.jpg" alt="First slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Título</h5>
+                                <p>Descripción</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="img/dos.jpg" alt="Second slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Título</h5>
+                                <p>Descripción</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="img/tres.jpg" alt="Third slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Título</h5>
+                                <p>Descripción</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="img/cuatro.jpg" alt="Third slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Título</h5>
+                                <p>Descripción</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+
+    <div class="container">
+        <h3 class="pt-5">Ventana modal</h3>
+        <div class=" d-block bg-dark">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mimodal">Agregar</button>
+        </div>
+        <!-- EL MODAL -->
+        <div class="modal fade" id="mimodal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- CABECERA -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Cabecera</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!--BODY -->
+                    <div class="modal-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua.
+                    </div>
+                    <!-- FOOTER -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cierra</button>
+                        <button type="button" class="btn btn-primary">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. <a href="#" data-toggle="tooltip" title="Descripción del tooltip!">Mi tooltip</a> Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat.
+        </p>
+    </div>
+    <p>UNO</p>
+    <p>UNO</p>
+    <p>UNO</p>
+    <p>UNO</p>
+    <p>UNO</p>
+    <p>UNO</p>
+    <p>UNO</p>
+
+
+    <!--SECCIÓN DE SCRIPTS -->
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
