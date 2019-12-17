@@ -24,7 +24,7 @@
         "google-auth-library": "^2.0.2",
         "jsonwebtoken": "^8.4.0",
         "moment": "^2.23.0",
-        "mongoose": "^5.4.16",
+        "mongoose": "^5.7.5",
         "mongoose-unique-validator": "^2.0.2",
         "nuxt": "^2.6.2",
         "pdf2svg": "^0.1.2",
