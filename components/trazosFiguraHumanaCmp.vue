@@ -64,61 +64,61 @@
 
     },
 
-    // esta chingón. Ejecuta un avez que se estima ya se ha renderizado el DOM 
+    // esta chingón. Ejecuta un avez que se estima ya se ha renderizado el DOM
     updated:
       //function () {
       //  this.mouseOverPizarra();
       //},
       debounce(function () {
-      this.$nextTick(() => {
-        this.mouseOverPizarra(); // runs only once
-      })
-    }, 250),
-  
-  methods: {
-    getBase64ToDisplay: function (imgBase64) {
-      if (imgBase64) {
-        return "data: image/png;base64," + imgBase64
-      };
-      return "no-image.jpg"
-    },
+        this.$nextTick(() => {
+          this.mouseOverPizarra(); // runs only once
+        })
+      }, 250),
 
-    dibujarImg: function (fuenteImg) {
+    methods: {
+      getBase64ToDisplay: function (imgBase64) {
+        if (imgBase64) {
+          return "data: image/png;base64," + imgBase64
+        };
+        return "no-image.jpg"
+      },
 
-      var c = document.getElementById("pizarra");
-      var ctx = c.getContext("2d");
+      dibujarImg: function (fuenteImg) {
 
-      var img = document.getElementById(fuenteImg);
-      ctx.drawImage(img, 0, 0, 300, 300);
-    },
+        var c = document.getElementById("pizarra");
+        var ctx = c.getContext("2d");
 
-    getTrazosFiguraHumana() {
-      var canvas = document.getElementById("pizarra");
-      this.imgBase64 = canvas.toDataURL();
+        var img = document.getElementById(fuenteImg);
+        ctx.drawImage(img, 0, 0, 300, 300);
+      },
 
-      this.imgBase64 = this.imgBase64.slice(this.imgBase64.indexOf(',') + 1);
+      getTrazosFiguraHumana() {
+        var canvas = document.getElementById("pizarra");
+        this.imgBase64 = canvas.toDataURL();
 
-      this.$emit('trazosHechos', this.imgBase64);
-    },
+        this.imgBase64 = this.imgBase64.slice(this.imgBase64.indexOf(',') + 1);
 
-    limpiarTrazosFiguraHumana() {
-      lineas = [];
-      this.dibujarImg('imgFiguraHumanaLimpia');
-      this.getTrazosFiguraHumana();
-    },
-    mouseLeavePizarra() {
-      this.getTrazosFiguraHumana();
-    },
-    mouseOverPizarra() {
-      if (this.primeraVez) {
-        this.dibujarImg('imgFiguraHumanaDeOrigen');
-        this.primeraVez = !this.primeraVez;
-      }
+        this.$emit('trazosHechos', this.imgBase64);
+      },
 
-    },
+      limpiarTrazosFiguraHumana() {
+        lineas = [];
+        this.dibujarImg('imgFiguraHumanaLimpia');
+        this.getTrazosFiguraHumana();
+      },
+      mouseLeavePizarra() {
+        this.getTrazosFiguraHumana();
+      },
+      mouseOverPizarra() {
+        if (this.primeraVez) {
+          this.dibujarImg('imgFiguraHumanaDeOrigen');
+          this.primeraVez = !this.primeraVez;
+        }
+
+      },
 
 
-  }
+    }
   }
 
 </script>
