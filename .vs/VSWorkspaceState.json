@@ -1,7 +1,13 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\components",
+    "\\models",
+    "\\public",
+    "\\public\\content",
+    "\\public\\content\\js",
+    "\\routes"
   ],
-  "SelectedNode": "\\package.json",
+  "SelectedNode": "\\sube.bat",
   "PreviewInSolutionExplorer": false
 }
